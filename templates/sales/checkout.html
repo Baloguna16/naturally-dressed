@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="container" style="max-width: 900px;">
+    <div class="row d-flex justify-content-center">
+      <p>this is your Cart</p>
+      {% for product in products %}
+        <div class="col-lg-12">
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="{{ product_link }}/{{ product.id }}.jpg" class="card-img-top" alt="{{ product.name }}">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ product.name }}</h5>
+                  <p class="card-text">{{ product.get_price() }} <a href="/shop/p.{{ product.id }}">go to details</a></p>
+                  <p class="card-text"><small class="text-muted">Quantity in Cart: {{ quantities[product.id] }}</small></p>
+                  <a href="/shop/p.{{ product.id }}/add">plus</a>
+                  <a href="/shop/p.{{ product.id }}/drop">minus</a>
+                  <a href="/checkout/p.{{ product.id }}/remove">remove from cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <p>Total Bill: {{ cart.total_cost }}</p>
+      <br>
+      <a href="/checkout/payment">Order</a>
+    </div>
+  </div>
+{% endblock %}

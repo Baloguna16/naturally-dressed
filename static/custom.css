@@ -1,0 +1,57 @@
+body
+{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.background-nd-logo {
+  width: auto;
+  height: 100%; }
+
+img.background-logo
+{
+  position: absolute;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  top: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Poppins', sans-serif;
+}
+
+a.custom-card {
+  color: inherit;
+}
+
+a.custom-card:hover {
+  color: inherit;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.btn-primary {
+  background-color: #FAFDF7;
+  border-color: black;
+  border-width: thin;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: green;
+  border-color: green;
+  border-width: thin;
+  text-decoration: none;
+  color: white;
+}
+
+@media (min-width: 300px) and (max-width: 800px) {
+   .collapse-sub {
+       display: none !important;
+   }
+}

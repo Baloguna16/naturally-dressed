@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<br>
+<h1 class="display-2 text-center" style="color: green;">About Us</h1>
+<div class="container" style="background-color: #FAFDF7; max-width: 600px;">
+  <h5 class="text-center">
+    Learn about the product and meet the team!
+  </h5>
+</div>
+<br>
+<div class="row justify-content-md-center">
+  <div class="col-lg-2 col-12">
+    <img src="../static/icons/ade-nd.png" class="mx-auto d-block mb-1" style="height: 160px;" alt="Ade">
+    <h5 class="text-center">Ade Balogun</h5>
+    <p class="text-center">Digital</p>
+  </div>
+  <div class="col-lg-2 col-12">
+    <img src="../static/icons/amalia-nd.png" class="mx-auto d-block mb-1" style="height: 160px;" alt="Amalia">
+    <h5 class="text-center">Amalia Choupi</h5>
+    <p class="text-center">Marketing</p>
+  </div>
+  <div class="col-lg-2 col-12">
+    <img src="../static/icons/christian-nd.png" class="mx-auto d-block mb-1" style="height: 160px;" alt="Christian">
+    <h5 class="text-center">Christian Tuwahatu</h5>
+    <p class="text-center">Sourcing</p>
+  </div>
+  <div class="col-lg-2 col-12">
+    <img src="../static/icons/nathan-nd.png" class="mx-auto d-block mb-1" style="height: 160px;" alt="Nathan">
+    <h5 class="text-center">Nathan Leong</h5>
+    <p class="text-center">R&D</p>
+  </div>
+</div>
+<div class="container-fluid" style="background-color: #FAFDF7;">
+  <div class="row d-flex justify-content-center">
+    <br>
+    <div class="col" style="max-width: 600px;">
+      <br>
+      <h2>What We're Building</h2>
+      <br>
+      <p>
+        Every year, the world generates 92 million tonnes of textile waste.
+        These textiles are largely plastic based, giving each tossed fabric a
+        century-long ecological footprint. Consumers have started to see the
+        size of the problem at hand and have started to solve it for themselves.
+        Sometimes, that means waiting longer to buy clothes or sharing with friends.
+      </p>
+      <p>
+        But what if you didn't have to compromise on trends? What if our clothes
+        could have zero environmental impact?
+      </p>
+      <p>
+        We created <big><strong style="color: green;">Naturally Dressed</strong></big>
+        to revolutionize sustainable apparel. Our products woven from our patented
+        algae-derived fabrics biodegrade after they've been tossed.
+      </p>
+      <br>
+      <br>
+      <h2>Meet the Team</h2>
+      <br>
+      <p>
+        We are a team of four chemical engineers from Imperial College London. We
+        were deeply concerned with the failure of sustainability in the fashion
+        industry, and decided to do something about it. In addition to having the
+        technical skill to bring the product to market, we have the specialized
+        team skills to build a company to lead this revolution in fashion and
+        sustainability.
+      </p>
+      <p>
+        Click "Get Access" to drop your email and be among the
+        first to get our swimwear when it launches.
+      </p>
+      <br>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <a role="button" class="btn btn-primary btn-lg" href="/get-access">Get Access</a>
+      </div>
+      <br>
+      <img src="../static/icons/banner.png" class="mx-auto d-block mb-1" style="height: 160px;" alt="Ade">
+    </div>
+  </div>
+</div>
+<img src="static/icons/color.png" class="background-logo" style="object-fit: cover;" alt="color">
+{% endblock %}

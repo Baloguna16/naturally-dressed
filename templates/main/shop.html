@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  <div class="container" style=" max-width: 900px;">
+    <div class="row">
+      <div class="col">
+        <br>
+        <h1 class="text-center">Shop Our Products</h1>
+        <br>
+        <p class="text-center">
+          More swimsuits to come!
+        </p>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+    {% for product in products %}
+      <div class="col-md-6 col-lg-4">
+        <a href="/shop/p.{{ product.id }}" class="custom-card">
+          <div class="card bg-dark text-white">
+            <img src="{{ product_link }}/{{ product.id }}.jpg" class="card-img" alt="{{ product.name }}">
+            <div class="card-img-overlay">
+              <h5 class="card-title">{{ product.name }}</h5>
+              <p class="card-text">{{ product.get_price() }}</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+{% endblock %}

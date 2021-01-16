@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block body %}
+<br>
+<div class="container" style=" max-width: 900px;">
+  <h1 class="text-center">Ingredient Launch</h1>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <form action="/admin/add_ingredient" method="post" enctype="multipart/form-data">
+        <br>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" name="name" minlength="1" maxlength="49">
+          <label for="floatingInput">Name</label>
+        </div>
+        <br>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" name="source" minlength="1" maxlength="49">
+          <label for="floatingInput">Source</label>
+        </div>
+        <br>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Ingredient Photo (Square Ideally)</label>
+          <input class="form-control" type="file" id="formFile" name="image" accept="image/*">
+        </div>
+        <div class="form-row justify-content-center">
+          <div class="col-md-auto">
+            <input type='submit' value='Publish'></input>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

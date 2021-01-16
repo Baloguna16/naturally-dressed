@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block body %}
+<br>
+<h1 class="display-2 text-center" style=" color: green;">Get Access</h1>
+<div class="container" style=" max-width: 600px;">
+  <h5 class="text-center">
+    Be among the first to try Naturally Dressed.
+    Signup for first access when our product launches!
+  </h5>
+</div>
+<div class="container" style=" max-width: 900px;">
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card" style="background-color: #CEE5D3; border-color: #CEE5D3;">
+        <div class="card-body">
+          <form action="/get-access" method="post">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" name="first_name" minlength="1" maxlength="49">
+              <label for="floatingInput">First Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" name="last_name" minlength="1" maxlength="49">
+              <label for="floatingInput">Last Name</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" name="email" minlength="1" maxlength="49">
+              <label for="floatingInput">Email</label>
+            </div>
+            <div class="form-row justify-content-center">
+              <div class="col-md-auto">
+                <div class="d-grid gap-2">
+                  <input class="btn btn-primary btn-lg" type='submit' value='Register'></input>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="static/icons/lounge.png" style="width: 100%;" alt="lounge">
+    </div>
+  </div>
+</div>
+<img src="static/icons/color.png" class="background-logo" alt="color">
+{% endblock %}
