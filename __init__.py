@@ -13,7 +13,7 @@ def internal_server(e):
   return render_template('error/500.html'), 500
 
 #Create Flask object
-def create_app(config_object=DevelopmentConfig()):
+def create_app(config_object=ProductionConfig()):
     app = Flask(__name__)
     app.config.from_object(config_object)
 
